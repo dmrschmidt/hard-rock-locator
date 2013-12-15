@@ -11,7 +11,27 @@
 #import "HRLMapAnnotationView.h"
 
 @implementation HRLLocationProvider
-- (NSArray *)locations {
+- (instancetype)init {
+  self = [super init];
+  if(self) {
+    [self loadLocations];
+    [self updateVisitedAnnotationsCount];
+  }
+  
+  return self;
+}
+
+- (void)toggleAnnotationVisitedStatus:(HRLMapAnnotationView *)annotationView {
+  HRLMapAnnotation *annotation = annotationView.annotation;
+  [annotation setVisited:!annotation.visited];
+  [annotationView redraw];
+  
+  [self updateVisitedAnnotationsCount];
+}
+
+#pragma mark - Private
+
+- (void)loadLocations {
   NSArray *locationDictionaries = [self locationDictionaries];
   NSMutableArray *locations = [[NSMutableArray alloc] initWithCapacity:locationDictionaries.count];
   
@@ -19,17 +39,15 @@
     HRLMapAnnotation *annotation = [self annotationFromDictionary:locationDict];
     [locations addObject:annotation];
   }];
-  
-  return locations;
+  _locations = [NSArray arrayWithArray:locations];
 }
 
-- (void)toggleAnnotationVisitedStatus:(HRLMapAnnotationView *)annotationView {
-  HRLMapAnnotation *annotation = annotationView.annotation;
-  [annotation setVisited:!annotation.visited];
-  [annotationView redraw];
+- (void)updateVisitedAnnotationsCount {
+  _visitedAnnotationsCount = 0;
+  [self.locations enumerateObjectsUsingBlock:^(HRLMapAnnotation *annotation, NSUInteger idx, BOOL *stop) {
+    _visitedAnnotationsCount += (NSUInteger)annotation.visited;
+  }];
 }
-
-#pragma mark - Private
 
 - (NSArray *)locationDictionaries {
   NSURL *JSONURL = [[NSBundle mainBundle] URLForResource:@"locations" withExtension:@"json"];

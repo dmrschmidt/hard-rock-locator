@@ -13,6 +13,7 @@
 
 @interface HRLViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *visitedCountLabel;
 @property (strong, nonatomic) HRLLocationProvider *locationProvider;
 @end
 
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self inititalizeLocations];
+  [self updateVisitedCountLabel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +45,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
   HRLMapAnnotationView *pin = (HRLMapAnnotationView *)view;
   [self.locationProvider toggleAnnotationVisitedStatus:pin];
+  [self updateVisitedCountLabel];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -55,6 +58,11 @@
   [self.locationProvider.locations enumerateObjectsUsingBlock:^(HRLMapAnnotation *annotation, NSUInteger idx, BOOL *stop) {
     [self.mapView addAnnotation:annotation];
   }];
+}
+
+#pragma mark - Private methods
+- (void)updateVisitedCountLabel {
+  self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %d / %d", self.locationProvider.visitedAnnotationsCount, self.locationProvider.locations.count];
 }
 
 @end

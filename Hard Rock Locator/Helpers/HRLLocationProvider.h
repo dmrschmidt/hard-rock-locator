@@ -11,6 +11,8 @@
 @class HRLMapAnnotationView;
 
 @interface HRLLocationProvider : NSObject
-- (NSArray *)locations;
+@property (assign, nonatomic, readonly) NSUInteger visitedAnnotationsCount;
+@property (strong, nonatomic, readonly) NSArray *locations;
+
 - (void)toggleAnnotationVisitedStatus:(HRLMapAnnotationView *)annotationView;
 @end

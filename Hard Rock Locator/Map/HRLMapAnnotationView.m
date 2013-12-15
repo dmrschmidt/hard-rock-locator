@@ -18,6 +18,8 @@
   self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
   if(self) {
     self.canShowCallout = YES;
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
+    [self addGestureRecognizer:tapGestureRecognizer];
     [self loadImage];
   }
   
@@ -36,6 +38,17 @@
   self.stateButton.frame = CGRectMake(0, 0, 32, 32);
   
   return self.stateButton;
+}
+
+- (void)didTap:(UITapGestureRecognizer *)gestureRecognizer {
+//  CGPoint touchPoint = [gestureRecognizer locationInView:self];
+//  NSLog(@"%f, %f", touchPoint.x, self.bounds.size.width);
+//  if(touchPoint.x < self.bounds.size.width) {
+//    NSLog(@"should open maps");
+//  }
+//  NSLog(@"did tap: %@", NSStringFromCGPoint(touchPoint));
+//  NSLog(@"view: %@", [self hitTest:touchPoint withEvent:nil]);
+//  NSLog(@"rect: %@", NSStringFromCGRect(self.frame));
 }
 
 - (void)redraw {
