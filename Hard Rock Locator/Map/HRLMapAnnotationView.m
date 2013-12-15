@@ -32,6 +32,7 @@
   UIImage *image = [self currentStateImage];
   
   self.stateButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  self.stateButton.tag = 2;
   [self.stateButton setImage:image forState:UIControlStateNormal];
   self.stateButton.frame = CGRectMake(0, 0, 32, 32);
   
@@ -45,16 +46,21 @@
 
 #pragma mark - Private methods
 - (void)loadImage {
+  UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  leftButton.tag = 1;
+  leftButton.frame = CGRectMake(0, 0, 32, 32);
+  self.leftCalloutAccessoryView = leftButton;
+  
   if(((HRLMapAnnotation *)self.annotation).thumbImageURL) {
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-      UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
       NSData *imageData = [NSData dataWithContentsOfURL:((HRLMapAnnotation *)self.annotation).thumbImageURL];
-      imageView.image = [UIImage imageWithData:imageData];
       
       dispatch_async(dispatch_get_main_queue(), ^(void){
-        self.leftCalloutAccessoryView = imageView;
+        [leftButton setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
       });
     });
+  } else {
+    [leftButton setImage:[UIImage imageNamed:@"icon-car"] forState:UIControlStateNormal];
   }
 }
 

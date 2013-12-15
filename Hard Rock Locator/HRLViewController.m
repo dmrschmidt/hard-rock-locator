@@ -43,9 +43,13 @@
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-  HRLMapAnnotationView *pin = (HRLMapAnnotationView *)view;
-  [self.locationProvider toggleAnnotationVisitedStatus:pin];
-  [self updateVisitedCountLabel];
+  if(control.tag == 1) {
+    [self openInMaps:view.annotation.coordinate];
+  } else {
+    HRLMapAnnotationView *pin = (HRLMapAnnotationView *)view;
+    [self.locationProvider toggleAnnotationVisitedStatus:pin];
+    [self updateVisitedCountLabel];
+  }
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -65,6 +69,16 @@
 }
 
 #pragma mark - Private methods
+- (void)openInMaps:(CLLocationCoordinate2D)coordinate {
+  Class mapItemClass = [MKMapItem class];
+  if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    [mapItem setName:@"Hard Rock Café"];
+    [mapItem openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving}];
+  }
+}
+
 - (void)updateVisitedCountLabel {
   self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %d / %d", self.locationProvider.visitedAnnotationsCount, self.locationProvider.locations.count];
 }
