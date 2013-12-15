@@ -22,6 +22,10 @@
 		C344817A185D3FF900A6F9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448159185D3FF900A6F9BE /* UIKit.framework */; };
 		C3448182185D3FF900A6F9BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3448180185D3FF900A6F9BE /* InfoPlist.strings */; };
 		C3448184185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448183185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m */; };
+		C344818F185D402800A6F9BE /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = C344818E185D402800A6F9BE /* locations.json */; };
+		C3448191185D407C00A6F9BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448190185D407C00A6F9BE /* MapKit.framework */; };
+		C3448195185D40B700A6F9BE /* HRLLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448194185D40B700A6F9BE /* HRLLocationProvider.m */; };
+		C3448199185D411800A6F9BE /* HRLMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448198185D411800A6F9BE /* HRLMapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,12 @@
 		C344817F185D3FF900A6F9BE /* Hard Rock LocatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hard Rock LocatorTests-Info.plist"; sourceTree = "<group>"; };
 		C3448181185D3FF900A6F9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3448183185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hard_Rock_LocatorTests.m; sourceTree = "<group>"; };
+		C344818E185D402800A6F9BE /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		C3448190185D407C00A6F9BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C3448193185D40B700A6F9BE /* HRLLocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLLocationProvider.h; sourceTree = "<group>"; };
+		C3448194185D40B700A6F9BE /* HRLLocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLLocationProvider.m; sourceTree = "<group>"; };
+		C3448197185D411800A6F9BE /* HRLMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLMapAnnotation.h; sourceTree = "<group>"; };
+		C3448198185D411800A6F9BE /* HRLMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLMapAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3448191185D407C00A6F9BE /* MapKit.framework in Frameworks */,
 				C3448158185D3FF900A6F9BE /* CoreGraphics.framework in Frameworks */,
 				C344815A185D3FF900A6F9BE /* UIKit.framework in Frameworks */,
 				C3448156185D3FF900A6F9BE /* Foundation.framework in Frameworks */,
@@ -103,6 +114,7 @@
 		C3448154185D3FF900A6F9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3448190185D407C00A6F9BE /* MapKit.framework */,
 				C3448155185D3FF900A6F9BE /* Foundation.framework */,
 				C3448157185D3FF900A6F9BE /* CoreGraphics.framework */,
 				C3448159185D3FF900A6F9BE /* UIKit.framework */,
@@ -114,6 +126,9 @@
 		C344815B185D3FF900A6F9BE /* Hard Rock Locator */ = {
 			isa = PBXGroup;
 			children = (
+				C3448196185D40F800A6F9BE /* Map */,
+				C3448192185D40A500A6F9BE /* Helpers */,
+				C344818D185D400D00A6F9BE /* Resources */,
 				C3448164185D3FF900A6F9BE /* HRLAppDelegate.h */,
 				C3448165185D3FF900A6F9BE /* HRLAppDelegate.m */,
 				C3448167185D3FF900A6F9BE /* Main_iPhone.storyboard */,
@@ -153,6 +168,32 @@
 				C3448180185D3FF900A6F9BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C344818D185D400D00A6F9BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C344818E185D402800A6F9BE /* locations.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3448192185D40A500A6F9BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C3448193185D40B700A6F9BE /* HRLLocationProvider.h */,
+				C3448194185D40B700A6F9BE /* HRLLocationProvider.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C3448196185D40F800A6F9BE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C3448197185D411800A6F9BE /* HRLMapAnnotation.h */,
+				C3448198185D411800A6F9BE /* HRLMapAnnotation.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +275,7 @@
 			files = (
 				C344816C185D3FF900A6F9BE /* Main_iPad.storyboard in Resources */,
 				C3448171185D3FF900A6F9BE /* Images.xcassets in Resources */,
+				C344818F185D402800A6F9BE /* locations.json in Resources */,
 				C3448169185D3FF900A6F9BE /* Main_iPhone.storyboard in Resources */,
 				C3448160185D3FF900A6F9BE /* InfoPlist.strings in Resources */,
 			);
@@ -254,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3448199185D411800A6F9BE /* HRLMapAnnotation.m in Sources */,
 				C3448162185D3FF900A6F9BE /* main.m in Sources */,
 				C344816F185D3FF900A6F9BE /* HRLViewController.m in Sources */,
+				C3448195185D40B700A6F9BE /* HRLLocationProvider.m in Sources */,
 				C3448166185D3FF900A6F9BE /* HRLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
