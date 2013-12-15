@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3448156185D3FF900A6F9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448155185D3FF900A6F9BE /* Foundation.framework */; };
+		C3448158185D3FF900A6F9BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448157185D3FF900A6F9BE /* CoreGraphics.framework */; };
+		C344815A185D3FF900A6F9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448159185D3FF900A6F9BE /* UIKit.framework */; };
+		C3448160185D3FF900A6F9BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C344815E185D3FF900A6F9BE /* InfoPlist.strings */; };
+		C3448162185D3FF900A6F9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448161185D3FF900A6F9BE /* main.m */; };
+		C3448166185D3FF900A6F9BE /* HRLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448165185D3FF900A6F9BE /* HRLAppDelegate.m */; };
+		C3448169185D3FF900A6F9BE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3448167185D3FF900A6F9BE /* Main_iPhone.storyboard */; };
+		C344816C185D3FF900A6F9BE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C344816A185D3FF900A6F9BE /* Main_iPad.storyboard */; };
+		C344816F185D3FF900A6F9BE /* HRLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C344816E185D3FF900A6F9BE /* HRLViewController.m */; };
+		C3448171185D3FF900A6F9BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3448170185D3FF900A6F9BE /* Images.xcassets */; };
+		C3448178185D3FF900A6F9BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448177185D3FF900A6F9BE /* XCTest.framework */; };
+		C3448179185D3FF900A6F9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448155185D3FF900A6F9BE /* Foundation.framework */; };
+		C344817A185D3FF900A6F9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448159185D3FF900A6F9BE /* UIKit.framework */; };
+		C3448182185D3FF900A6F9BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3448180185D3FF900A6F9BE /* InfoPlist.strings */; };
+		C3448184185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3448183185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C344817B185D3FF900A6F9BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C344814A185D3FF900A6F9BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3448151185D3FF900A6F9BE;
+			remoteInfo = "Hard Rock Locator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3448152185D3FF900A6F9BE /* Hard Rock Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hard Rock Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3448155185D3FF900A6F9BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3448157185D3FF900A6F9BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3448159185D3FF900A6F9BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C344815D185D3FF900A6F9BE /* Hard Rock Locator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hard Rock Locator-Info.plist"; sourceTree = "<group>"; };
+		C344815F185D3FF900A6F9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3448161185D3FF900A6F9BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3448163185D3FF900A6F9BE /* Hard Rock Locator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hard Rock Locator-Prefix.pch"; sourceTree = "<group>"; };
+		C3448164185D3FF900A6F9BE /* HRLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRLAppDelegate.h; sourceTree = "<group>"; };
+		C3448165185D3FF900A6F9BE /* HRLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRLAppDelegate.m; sourceTree = "<group>"; };
+		C3448168185D3FF900A6F9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C344816B185D3FF900A6F9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C344816D185D3FF900A6F9BE /* HRLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRLViewController.h; sourceTree = "<group>"; };
+		C344816E185D3FF900A6F9BE /* HRLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRLViewController.m; sourceTree = "<group>"; };
+		C3448170185D3FF900A6F9BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C3448176185D3FF900A6F9BE /* Hard Rock LocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hard Rock LocatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3448177185D3FF900A6F9BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C344817F185D3FF900A6F9BE /* Hard Rock LocatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hard Rock LocatorTests-Info.plist"; sourceTree = "<group>"; };
+		C3448181185D3FF900A6F9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3448183185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hard_Rock_LocatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C344814F185D3FF900A6F9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3448158185D3FF900A6F9BE /* CoreGraphics.framework in Frameworks */,
+				C344815A185D3FF900A6F9BE /* UIKit.framework in Frameworks */,
+				C3448156185D3FF900A6F9BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3448173185D3FF900A6F9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3448178185D3FF900A6F9BE /* XCTest.framework in Frameworks */,
+				C344817A185D3FF900A6F9BE /* UIKit.framework in Frameworks */,
+				C3448179185D3FF900A6F9BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3448149185D3FF900A6F9BE = {
+			isa = PBXGroup;
+			children = (
+				C344815B185D3FF900A6F9BE /* Hard Rock Locator */,
+				C344817D185D3FF900A6F9BE /* Hard Rock LocatorTests */,
+				C3448154185D3FF900A6F9BE /* Frameworks */,
+				C3448153185D3FF900A6F9BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3448153185D3FF900A6F9BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3448152185D3FF900A6F9BE /* Hard Rock Locator.app */,
+				C3448176185D3FF900A6F9BE /* Hard Rock LocatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3448154185D3FF900A6F9BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3448155185D3FF900A6F9BE /* Foundation.framework */,
+				C3448157185D3FF900A6F9BE /* CoreGraphics.framework */,
+				C3448159185D3FF900A6F9BE /* UIKit.framework */,
+				C3448177185D3FF900A6F9BE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C344815B185D3FF900A6F9BE /* Hard Rock Locator */ = {
+			isa = PBXGroup;
+			children = (
+				C3448164185D3FF900A6F9BE /* HRLAppDelegate.h */,
+				C3448165185D3FF900A6F9BE /* HRLAppDelegate.m */,
+				C3448167185D3FF900A6F9BE /* Main_iPhone.storyboard */,
+				C344816A185D3FF900A6F9BE /* Main_iPad.storyboard */,
+				C344816D185D3FF900A6F9BE /* HRLViewController.h */,
+				C344816E185D3FF900A6F9BE /* HRLViewController.m */,
+				C3448170185D3FF900A6F9BE /* Images.xcassets */,
+				C344815C185D3FF900A6F9BE /* Supporting Files */,
+			);
+			path = "Hard Rock Locator";
+			sourceTree = "<group>";
+		};
+		C344815C185D3FF900A6F9BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C344815D185D3FF900A6F9BE /* Hard Rock Locator-Info.plist */,
+				C344815E185D3FF900A6F9BE /* InfoPlist.strings */,
+				C3448161185D3FF900A6F9BE /* main.m */,
+				C3448163185D3FF900A6F9BE /* Hard Rock Locator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C344817D185D3FF900A6F9BE /* Hard Rock LocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3448183185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m */,
+				C344817E185D3FF900A6F9BE /* Supporting Files */,
+			);
+			path = "Hard Rock LocatorTests";
+			sourceTree = "<group>";
+		};
+		C344817E185D3FF900A6F9BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C344817F185D3FF900A6F9BE /* Hard Rock LocatorTests-Info.plist */,
+				C3448180185D3FF900A6F9BE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3448151185D3FF900A6F9BE /* Hard Rock Locator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3448187185D3FF900A6F9BE /* Build configuration list for PBXNativeTarget "Hard Rock Locator" */;
+			buildPhases = (
+				C344814E185D3FF900A6F9BE /* Sources */,
+				C344814F185D3FF900A6F9BE /* Frameworks */,
+				C3448150185D3FF900A6F9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hard Rock Locator";
+			productName = "Hard Rock Locator";
+			productReference = C3448152185D3FF900A6F9BE /* Hard Rock Locator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3448175185D3FF900A6F9BE /* Hard Rock LocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C344818A185D3FF900A6F9BE /* Build configuration list for PBXNativeTarget "Hard Rock LocatorTests" */;
+			buildPhases = (
+				C3448172185D3FF900A6F9BE /* Sources */,
+				C3448173185D3FF900A6F9BE /* Frameworks */,
+				C3448174185D3FF900A6F9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C344817C185D3FF900A6F9BE /* PBXTargetDependency */,
+			);
+			name = "Hard Rock LocatorTests";
+			productName = "Hard Rock LocatorTests";
+			productReference = C3448176185D3FF900A6F9BE /* Hard Rock LocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C344814A185D3FF900A6F9BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HRL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = dmrschmidt;
+				TargetAttributes = {
+					C3448175185D3FF900A6F9BE = {
+						TestTargetID = C3448151185D3FF900A6F9BE;
+					};
+				};
+			};
+			buildConfigurationList = C344814D185D3FF900A6F9BE /* Build configuration list for PBXProject "Hard Rock Locator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3448149185D3FF900A6F9BE;
+			productRefGroup = C3448153185D3FF900A6F9BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3448151185D3FF900A6F9BE /* Hard Rock Locator */,
+				C3448175185D3FF900A6F9BE /* Hard Rock LocatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3448150185D3FF900A6F9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C344816C185D3FF900A6F9BE /* Main_iPad.storyboard in Resources */,
+				C3448171185D3FF900A6F9BE /* Images.xcassets in Resources */,
+				C3448169185D3FF900A6F9BE /* Main_iPhone.storyboard in Resources */,
+				C3448160185D3FF900A6F9BE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3448174185D3FF900A6F9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3448182185D3FF900A6F9BE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C344814E185D3FF900A6F9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3448162185D3FF900A6F9BE /* main.m in Sources */,
+				C344816F185D3FF900A6F9BE /* HRLViewController.m in Sources */,
+				C3448166185D3FF900A6F9BE /* HRLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3448172185D3FF900A6F9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3448184185D3FF900A6F9BE /* Hard_Rock_LocatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C344817C185D3FF900A6F9BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3448151185D3FF900A6F9BE /* Hard Rock Locator */;
+			targetProxy = C344817B185D3FF900A6F9BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C344815E185D3FF900A6F9BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C344815F185D3FF900A6F9BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3448167185D3FF900A6F9BE /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3448168185D3FF900A6F9BE /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C344816A185D3FF900A6F9BE /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C344816B185D3FF900A6F9BE /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C3448180185D3FF900A6F9BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3448181185D3FF900A6F9BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3448185185D3FF900A6F9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3448186185D3FF900A6F9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3448188185D3FF900A6F9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hard Rock Locator/Hard Rock Locator-Prefix.pch";
+				INFOPLIST_FILE = "Hard Rock Locator/Hard Rock Locator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3448189185D3FF900A6F9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hard Rock Locator/Hard Rock Locator-Prefix.pch";
+				INFOPLIST_FILE = "Hard Rock Locator/Hard Rock Locator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C344818B185D3FF900A6F9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hard Rock Locator.app/Hard Rock Locator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hard Rock Locator/Hard Rock Locator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hard Rock LocatorTests/Hard Rock LocatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C344818C185D3FF900A6F9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hard Rock Locator.app/Hard Rock Locator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hard Rock Locator/Hard Rock Locator-Prefix.pch";
+				INFOPLIST_FILE = "Hard Rock LocatorTests/Hard Rock LocatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C344814D185D3FF900A6F9BE /* Build configuration list for PBXProject "Hard Rock Locator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3448185185D3FF900A6F9BE /* Debug */,
+				C3448186185D3FF900A6F9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3448187185D3FF900A6F9BE /* Build configuration list for PBXNativeTarget "Hard Rock Locator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3448188185D3FF900A6F9BE /* Debug */,
+				C3448189185D3FF900A6F9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C344818A185D3FF900A6F9BE /* Build configuration list for PBXNativeTarget "Hard Rock LocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C344818B185D3FF900A6F9BE /* Debug */,
+				C344818C185D3FF900A6F9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C344814A185D3FF900A6F9BE /* Project object */;
+}
