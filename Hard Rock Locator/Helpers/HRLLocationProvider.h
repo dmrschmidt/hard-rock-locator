@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class HRLMapAnnotationView;
+
 @interface HRLLocationProvider : NSObject
 - (NSArray *)locations;
+- (void)toggleAnnotationVisitedStatus:(HRLMapAnnotationView *)annotationView;
 @end

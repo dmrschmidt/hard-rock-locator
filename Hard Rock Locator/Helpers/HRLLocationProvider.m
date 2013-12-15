@@ -8,6 +8,7 @@
 
 #import "HRLLocationProvider.h"
 #import "HRLMapAnnotation.h"
+#import "HRLMapAnnotationView.h"
 
 @implementation HRLLocationProvider
 - (NSArray *)locations {
@@ -20,6 +21,12 @@
   }];
   
   return locations;
+}
+
+- (void)toggleAnnotationVisitedStatus:(HRLMapAnnotationView *)annotationView {
+  HRLMapAnnotation *annotation = annotationView.annotation;
+  [annotation setVisited:!annotation.visited];
+  [annotationView redraw];
 }
 
 #pragma mark - Private

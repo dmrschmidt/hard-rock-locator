@@ -13,14 +13,21 @@
 
 @interface HRLViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
+@property (strong, nonatomic) HRLLocationProvider *locationProvider;
 @end
 
 @implementation HRLViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if(self) {
+    self.locationProvider = [[HRLLocationProvider alloc] init];
+  }
+  return self;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-	
   [self inititalizeLocations];
 }
 
@@ -31,22 +38,21 @@
 #pragma mark - MKMapViewDelegate methods
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-  MKPinAnnotationView *pin = (MKPinAnnotationView *)view;
-  HRLMapAnnotation *annotation = (HRLMapAnnotation *)view.annotation;
-  [annotation setVisited:!annotation.visited];
-  pin.pinColor = annotation.pinColor;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+  HRLMapAnnotationView *pin = (HRLMapAnnotationView *)view;
+  [self.locationProvider toggleAnnotationVisitedStatus:pin];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-  HRLMapAnnotationView *pin = [[HRLMapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"hardrock"];
-  return pin;
+  return [[HRLMapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"hardrock"];
 }
 
 #pragma mark - Location Methods
 
 - (void)inititalizeLocations {
-  HRLLocationProvider *locationProvider = [[HRLLocationProvider alloc] init];
-  [locationProvider.locations enumerateObjectsUsingBlock:^(HRLMapAnnotation *annotation, NSUInteger idx, BOOL *stop) {
+  [self.locationProvider.locations enumerateObjectsUsingBlock:^(HRLMapAnnotation *annotation, NSUInteger idx, BOOL *stop) {
     [self.mapView addAnnotation:annotation];
   }];
 }
