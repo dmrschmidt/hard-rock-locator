@@ -24,20 +24,19 @@
                                 </connections>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-Vy-3iq">
-                                <rect key="frame" x="160" y="524" width="160" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="visited 0 / 162" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e89-uJ-xn2">
-                                        <rect key="frame" x="35" y="14" width="91" height="17"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="visited 0 / 162" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e89-uJ-xn2" userLabel="visitedLabel">
+                                        <rect key="frame" x="115" y="14" width="91" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="6Lm-0w-puu"/>
                                     <constraint firstAttribute="centerX" secondItem="e89-uJ-xn2" secondAttribute="centerX" id="mEE-MT-o4m"/>
                                     <constraint firstAttribute="height" constant="44" id="nXQ-wg-4dj"/>
                                     <constraint firstAttribute="centerY" secondItem="e89-uJ-xn2" secondAttribute="centerY" id="s2E-RX-VwJ"/>
@@ -46,6 +45,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AFJ-Vy-3iq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="34h-bd-3lN"/>
                             <constraint firstAttribute="trailing" secondItem="Mei-9e-cSl" secondAttribute="trailing" id="5bV-QZ-8IH"/>
                             <constraint firstItem="Mei-9e-cSl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7uP-kQ-GiW"/>
                             <constraint firstAttribute="trailing" secondItem="AFJ-Vy-3iq" secondAttribute="trailing" id="8Ne-16-Q3u"/>
