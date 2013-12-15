@@ -49,6 +49,10 @@
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  if ([annotation class] == MKUserLocation.class) {
+    return nil;
+  }
+  
   return [[HRLMapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"hardrock"];
 }
 
