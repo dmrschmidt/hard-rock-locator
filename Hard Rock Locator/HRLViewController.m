@@ -39,6 +39,19 @@
 
 #pragma mark - MKMapViewDelegate methods
 
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+  MKCoordinateRegion region;
+  MKCoordinateSpan span;
+  span.latitudeDelta = 10;
+  span.longitudeDelta = 10;
+  CLLocationCoordinate2D location;
+  location.latitude = aUserLocation.coordinate.latitude;
+  location.longitude = aUserLocation.coordinate.longitude;
+  region.span = span;
+  region.center = location;
+  [aMapView setRegion:region animated:YES];
+}
+
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
 }
 
