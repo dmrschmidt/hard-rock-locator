@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *visitedCountLabel;
 @property (strong, nonatomic) HRLLocationProvider *locationProvider;
+@property (assign, nonatomic) NSTimeInterval firstStartTime;
 @end
 
 @implementation HRLViewController
@@ -29,6 +30,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  self.firstStartTime = [NSDate timeIntervalSinceReferenceDate];
+  
   [self inititalizeLocations];
   [self updateVisitedCountLabel];
 }
@@ -40,6 +44,8 @@
 #pragma mark - MKMapViewDelegate methods
 
 - (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+  if([NSDate timeIntervalSinceReferenceDate] > self.firstStartTime + 5) return;
+  
   MKCoordinateRegion region;
   MKCoordinateSpan span;
   span.latitudeDelta = 10;
@@ -93,7 +99,7 @@
 }
 
 - (void)updateVisitedCountLabel {
-  self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %d / %d", self.locationProvider.visitedAnnotationsCount, self.locationProvider.locations.count];
+  self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %lu / %lu", (unsigned long)self.locationProvider.visitedAnnotationsCount, self.locationProvider.locations.count];
 }
 
 @end
