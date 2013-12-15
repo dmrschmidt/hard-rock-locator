@@ -38,6 +38,7 @@
   CLLocationDegrees longitude = [dictionary[@"long"] floatValue];
   CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
   HRLMapAnnotation *annotation = [[HRLMapAnnotation alloc] initWithCoordinate:coordinate
+                                                                           id:dictionary[@"id"]
                                                                          name:dictionary[@"name"]
                                                                       address:dictionary[@"address"]
                                                           thumbImageURLString:dictionary[@"thumbImage"]];

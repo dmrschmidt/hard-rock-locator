@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3006B71185D52B100D23DF2 /* HRLMapAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3006B70185D52B100D23DF2 /* HRLMapAnnotationView.m */; };
 		C3448156185D3FF900A6F9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448155185D3FF900A6F9BE /* Foundation.framework */; };
 		C3448158185D3FF900A6F9BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448157185D3FF900A6F9BE /* CoreGraphics.framework */; };
 		C344815A185D3FF900A6F9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3448159185D3FF900A6F9BE /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3006B6F185D52B100D23DF2 /* HRLMapAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLMapAnnotationView.h; sourceTree = "<group>"; };
+		C3006B70185D52B100D23DF2 /* HRLMapAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLMapAnnotationView.m; sourceTree = "<group>"; };
 		C3448152185D3FF900A6F9BE /* Hard Rock Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hard Rock Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3448155185D3FF900A6F9BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3448157185D3FF900A6F9BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +195,8 @@
 			children = (
 				C3448197185D411800A6F9BE /* HRLMapAnnotation.h */,
 				C3448198185D411800A6F9BE /* HRLMapAnnotation.m */,
+				C3006B6F185D52B100D23DF2 /* HRLMapAnnotationView.h */,
+				C3006B70185D52B100D23DF2 /* HRLMapAnnotationView.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3448199185D411800A6F9BE /* HRLMapAnnotation.m in Sources */,
+				C3006B71185D52B100D23DF2 /* HRLMapAnnotationView.m in Sources */,
 				C3448162185D3FF900A6F9BE /* main.m in Sources */,
 				C344816F185D3FF900A6F9BE /* HRLViewController.m in Sources */,
 				C3448195185D40B700A6F9BE /* HRLLocationProvider.m in Sources */,
@@ -519,6 +525,7 @@
 				C3448189185D3FF900A6F9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C344818A185D3FF900A6F9BE /* Build configuration list for PBXNativeTarget "Hard Rock LocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +534,7 @@
 				C344818C185D3FF900A6F9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

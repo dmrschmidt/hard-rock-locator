@@ -7,9 +7,9 @@
 //
 
 #import "HRLViewController.h"
-#import <MapKit/MapKit.h>
 #import "HRLLocationProvider.h"
 #import "HRLMapAnnotation.h"
+#import "HRLMapAnnotationView.h"
 
 @interface HRLViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -26,7 +26,20 @@
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MKMapViewDelegate methods
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+  MKPinAnnotationView *pin = (MKPinAnnotationView *)view;
+  HRLMapAnnotation *annotation = (HRLMapAnnotation *)view.annotation;
+  [annotation setVisited:!annotation.visited];
+  pin.pinColor = annotation.pinColor;
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  HRLMapAnnotationView *pin = [[HRLMapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"hardrock"];
+  return pin;
 }
 
 #pragma mark - Location Methods
