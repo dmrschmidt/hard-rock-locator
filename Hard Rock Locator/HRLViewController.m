@@ -99,7 +99,7 @@
 }
 
 - (void)updateVisitedCountLabel {
-  self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %lu / %lu", (unsigned long)self.locationProvider.visitedAnnotationsCount, self.locationProvider.locations.count];
+  self.visitedCountLabel.text = [NSString stringWithFormat:@"visited %lu / %lu", (unsigned long)self.locationProvider.visitedAnnotationsCount, (unsigned long)self.locationProvider.locations.count];
 }
 
 @end
